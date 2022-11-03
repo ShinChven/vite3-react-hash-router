@@ -55,7 +55,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 ## Enable Relative Path
 
-Add `base` to `vite.config.ts` to enable relative path so your app can be deployed to a subdirectory.
+Add `base` field to `vite.config.ts` to enable relative path so your app can be deployed to a subdirectory of another web root.
 
 ```ts
 import { defineConfig } from 'vite'

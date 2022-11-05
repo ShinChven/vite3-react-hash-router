@@ -5,5 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: './',
-
+  css:{
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          'primary-color': '#1DA57A',
+        },
+        javascriptEnabled: true,
+      }
+    }
+  }
 })

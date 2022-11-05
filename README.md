@@ -68,3 +68,35 @@ export default defineConfig({
 
 })
 ```
+
+## Enable LESS
+
+[Official guide](https://vitejs.dev/guide/features.html#css-pre-processors) to enable LESS.
+
+```bash
+npm install -D less less-loader
+```
+
+Add `less` to `vite.config.ts` to enable less.
+
+```ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: './',
+  css:{ // Modify css processor options
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          // 'primary-color': '#1DA57A',
+        },
+        javascriptEnabled: true,
+      }
+    }
+  }
+})
+```
+
